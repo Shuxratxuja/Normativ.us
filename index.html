@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=DM+Serif+Display:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jost:ital,wght@0,100..900;1,100..900&family=Mona+Sans:ital,wght@0,200..900;1,200..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sen:wght@400..800&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <header>
+        <div class="banner">
+            <p class="banner__text">Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</p>
+            <a class="banner__link" href="#">ShopNow</a>
+            <select class="language__selector" name="" id="">
+                <option class="language__selector-select" value="En">English</option>
+                <option class="language__selector-select" value="Ru">Russian</option>
+                <option class="language__selector-select" value="Uz">Uzbek</option>
+            </select>
+        </div>
+        <div class="logo">
+            <p class="logo__text">Exclusive</p>
+            <nav>
+                <ul class="menu">
+                    <li class="menu-li"><a class="menu-a active" href="">Home</a></li>
+                    <li class="menu-li"><a class="menu-a" href="">Contact</a></li>
+                    <li class="menu-li"><a class="menu-a" href="">About</a></li>
+                    <li class="menu-li"><a class="menu-a" href="">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="search">
+                <input type="text" class="search__input" placeholder="What are you looking for?">
+                <button class="search__button"><img src="./assets/icons/Vector (12).svg" alt="search__button"></button>
+                <img class="saved__icon" src="./assets/icons/Vector (13).svg" alt="saved__icon">
+                <img class="cart__icon" src="./assets/icons/Cart1.svg" alt="cart__icon">
+            </div>
+        </div>
+        <div class="line"></div>
+        <div class="header__div">
+            <ul class="sidebar">
+                <li class="sidebar__li"><a class="sidebar__a" href="">Woman’s Fashion</a><img class="arrow__icon"
+                        src="./assets/icons/arrow-icon.svg" alt="arrow-icon"></li>
+                <li class="sidebar__li"><a class="sidebar__a" href="">Men’s Fashion</a><img class="arrow__icon"
+                        src="./assets/icons/arrow-icon.svg" alt="arrow-icon"></li>
+                <li class="sidebar__li"><a class="sidebar__a" href="">Electronics</a></li>
+                <li class="sidebar__li"><a class="sidebar__a" href="">Home & Lifestyle</a></li>
+                <li class="sidebar__li"><a class="sidebar__a" href="">Medicine</a></li>
+                <li class="sidebar__li"><a class="sidebar__a" href="">Sports & Outdoor</a></li>
+                <li class="sidebar__li"><a class="sidebar__a" href="">Baby’s & Toys</a></li>
+                <li class="sidebar__li"><a class="sidebar__a" href="">Groceries & Pets</a></li>
+                <li class="sidebar__li"><a class="sidebar__a" href="">Health & Beauty</a></li>
+            </ul>
+            <div class="line-2"></div>
+            <div>
+                <div class="slideshow">
+                    <div class="slideshow__div">
+                        <div class="apple">
+                            <img class="apple__logo" src="./assets/icons/apple-logo.svg" alt="apple-logo">
+                            <span class="series">iPhone 14 Series</span>
+                        </div>
+                        <p class="slide__text">Up to 10% <br> off Voucher</p>
+                        <a class="slide__button" href=""><span>Shop Now</span><img src="./assets/icons/arrow-white.svg"
+                                alt="arrow-white"></a>
+                    </div>
+                    <img class="slide__image" src="./assets/images/apple-img.png" alt="apple-img">
+                </div>
+                <div class="slider">
+                    <button class="slider__indicators"></button>
+                    <button class="slider__indicators"></button>
+                    <button class="slider__indicators indicators-actv"></button>
+                    <button class="slider__indicators"></button>
+                    <button class="slider__indicators"></button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section>
+            <div class="sales">
+                <div class="sales__top">
+                    <div class="top__more">
+                        <div class="color"></div>
+                        <p class="top__title">Today’s</p>
+                    </div>
+                    <p class="title__more">Flash Sales</p>
+                </div>
+                <div class="sales__right">
+                    <div class="section__title">
+                        <div class="title__time">
+                            <span class="sales__timer">Days</span>
+                            <span class="sales__timer-item">03</span>
+                        </div>
+                        <img class="image-dots" src="./assets/icons/image-dots.svg" alt="image-dots">
+                        <div class="title__time">
+                            <span class="sales__timer">Hours</span>
+                            <span class="sales__timer-item">23</span>
+                        </div>
+                        <img class="image-dots" src="./assets/icons/image-dots.svg" alt="image-dots">
+                        <div class="title__time">
+                            <span class="sales__timer">Minutes</span>
+                            <span class="sales__timer-item">19</span>
+                        </div>
+                        <img class="image-dots" src="./assets/icons/image-dots.svg" alt="image-dots">
+                        <div class="title__time">
+                            <span class="sales__timer">Seconds</span>
+                            <span class="sales__timer-item">56</span>
+                        </div>
+                    </div>
+                    <div class="navigation__buttons">
+                        <button class="prev__btn"><img src="./assets/icons/prev-btn.svg" alt="prev-btn"></button>
+                        <button class="next__btn"><img src="./assets/icons/next-btn.svg" alt="next-btn"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="products-cards">
+                <div class="products">
+                    <div class="product__item">
+                        <img class="product__image" src="./assets/images/cards-image-1.png" alt="cards-image-1">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                        <span class="product__discount">-40%</span>
+                        <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg" alt="like-icon"></button>
+                        <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                    </div>
+                    <p class="product__name">HAVIT HV-G92 Gamepad</p>
+                    <div class="product__price">
+                        <span class="current__price">$120</span>
+                        <span class="original__price">$160</span>
+                    </div>
+                    <div class="product__rating">
+                        <div>
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                        </div>
+                        <span class="rating__count">(88)</span>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product__item">
+                        <img class="product__image" src="./assets/images/cards-image-2.png" alt="cards-image-1">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                        <span class="product__discount">-35%</span>
+                        <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg" alt="like-icon"></button>
+                        <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                    </div>
+                    <p class="product__name">AK-900 Wired Keyboard</p>
+                    <div class="product__price">
+                        <span class="current__price">$960</span>
+                        <span class="original__price">$1160</span>
+                    </div>
+                    <div class="product__rating">
+                        <div>
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/gray-star.svg" alt="star-icon">
+                        </div>
+                        <span class="rating__count">(75)</span>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product__item">
+                        <img class="product__image" src="./assets/images/cards-image-3.png" alt="cards-image-1">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                        <span class="product__discount">-30%</span>
+                        <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg" alt="like-icon"></button>
+                        <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                    </div>
+                    <p class="product__name">IPS LCD Gaming Monitor</p>
+                    <div class="product__price">
+                        <span class="current__price">$370</span>
+                        <span class="original__price">$400</span>
+                    </div>
+                    <div class="product__rating">
+                        <div>
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                        </div>
+                        <span class="rating__count">(99)</span>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product__item">
+                        <img class="product__image" src="./assets/images/cards-image-4.png" alt="cards-image-1">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                        <span class="product__discount">-25%</span>
+                        <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg" alt="like-icon"></button>
+                        <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                    </div>
+                    <p class="product__name">S-Series Comfort Chair</p>
+                    <div class="product__price">
+                        <span class="current__price">$375</span>
+                        <span class="original__price">$400</span>
+                    </div>
+                    <div class="product__rating">
+                        <div class="stars">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon-2.svg" alt="star-icon">
+                        </div>
+                        <span class="rating__count">(99)</span>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product__item">
+                        <img class="product__image" src="./assets/images/cards-image-4.png" alt="cards-image-1">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                        <span class="product__discount">-25%</span>
+                        <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg" alt="like-icon"></button>
+                        <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                    </div>
+                    <p class="product__name">S-Series Comfort Chair</p>
+                    <div class="product__price">
+                        <span class="current__price">$375</span>
+                        <span class="original__price">$400</span>
+                    </div>
+                    <div class="product__rating">
+                        <div class="stars">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon-2.svg" alt="star-icon">
+                        </div>
+                        <span class="rating__count">(99)</span>
+                    </div>
+                </div>
+                <div class="products">
+                    <div class="product__item">
+                        <img class="product__image" src="./assets/images/cards-image-4.png" alt="cards-image-1">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                        <span class="product__discount">-25%</span>
+                        <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg" alt="like-icon"></button>
+                        <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                    </div>
+                    <p class="product__name">S-Series Comfort Chair</p>
+                    <div class="product__price">
+                        <span class="current__price">$375</span>
+                        <span class="original__price">$400</span>
+                    </div>
+                    <div class="product__rating">
+                        <div class="stars">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon-2.svg" alt="star-icon">
+                        </div>
+                        <span class="rating__count">(99)</span>
+                    </div>
+                </div>
+            </div>
+            <div class="products__button">
+                <button class="products__button-btn">View All Products</button>
+            </div>
+        </section>
+        <div class="categories">
+            <div class="category">
+                <div class="top">
+                    <div class="top__more">
+                        <div class="color"></div>
+                        <div class="category__title">Categories</div>
+                    </div>
+                    <p class="category__badge">Browse By Category</p>
+                </div>
+                <div class="navigation__buttons-2">
+                    <button class="prev__btn"><img src="./assets/icons/prev-btn.svg" alt="prev-btn"></button>
+                    <button class="next__btn"><img src="./assets/icons/next-btn.svg" alt="next-btn"></button>
+                </div>
+            </div>
+            <div class="category__item">
+                <div class="item">
+                    <svg class="category__icon" width="56" height="56" viewBox="0 0 56 56" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_8855_868)">
+                            <path
+                                d="M38.9375 6.125H17.0625C15.5523 6.125 14.3281 7.34922 14.3281 8.85938V47.1406C14.3281 48.6508 15.5523 49.875 17.0625 49.875H38.9375C40.4477 49.875 41.6719 48.6508 41.6719 47.1406V8.85938C41.6719 7.34922 40.4477 6.125 38.9375 6.125Z"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M25.6667 7H31.1354" stroke="black" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M28 44.0052V44.0305" stroke="black" stroke-width="2.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <line x1="15.1667" y1="39.8334" x2="40.8333" y2="39.8334" stroke="black" stroke-width="2" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8855_868">
+                                <rect width="56" height="56" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="category__name">Phones</span>
+                </div>
+                <div class="item">
+                    <svg class="category__icon" width="56" height="56" viewBox="0 0 56 56" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_8855_613)">
+                            <path
+                                d="M46.6667 9.33337H9.33333C8.04467 9.33337 7 10.378 7 11.6667V35C7 36.2887 8.04467 37.3334 9.33333 37.3334H46.6667C47.9553 37.3334 49 36.2887 49 35V11.6667C49 10.378 47.9553 9.33337 46.6667 9.33337Z"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M16.3333 46.6666H39.6667" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M21 37.3334V46.6667" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M35 37.3334V46.6667" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M8 32H48" stroke="black" stroke-width="2" stroke-linecap="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8855_613">
+                                <rect width="56" height="56" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="category__name">Computers</span>
+                </div>
+                <div class="item">
+                    <svg class="category__icon" width="56" height="56" viewBox="0 0 56 56" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_8855_629)">
+                            <path
+                                d="M35 14H21C17.134 14 14 17.134 14 21V35C14 38.866 17.134 42 21 42H35C38.866 42 42 38.866 42 35V21C42 17.134 38.866 14 35 14Z"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M21 42V49H35V42" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M21 14V7H35V14" stroke="black" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <line x1="24" y1="23" x2="24" y2="34" stroke="black" stroke-width="2"
+                                stroke-linecap="round" />
+                            <line x1="28" y1="28" x2="28" y2="34" stroke="black" stroke-width="2"
+                                stroke-linecap="round" />
+                            <line x1="32" y1="26" x2="32" y2="34" stroke="black" stroke-width="2"
+                                stroke-linecap="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8855_629">
+                                <rect width="56" height="56" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="category__name">SmartWatch</span>
+                </div>
+                <div class="item">
+                    <svg class="category__icon" width="56" height="56" viewBox="0 0 56 56" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_8855_6)">
+                            <path
+                                d="M11.6667 16.3334H14C15.2377 16.3334 16.4247 15.8417 17.2998 14.9665C18.175 14.0914 18.6667 12.9044 18.6667 11.6667C18.6667 11.0479 18.9125 10.4544 19.3501 10.0168C19.7877 9.57921 20.3812 9.33337 21 9.33337H35C35.6188 9.33337 36.2123 9.57921 36.6499 10.0168C37.0875 10.4544 37.3333 11.0479 37.3333 11.6667C37.3333 12.9044 37.825 14.0914 38.7002 14.9665C39.5753 15.8417 40.7623 16.3334 42 16.3334H44.3333C45.571 16.3334 46.758 16.825 47.6332 17.7002C48.5083 18.5754 49 19.7624 49 21V42C49 43.2377 48.5083 44.4247 47.6332 45.2999C46.758 46.175 45.571 46.6667 44.3333 46.6667H11.6667C10.429 46.6667 9.242 46.175 8.36683 45.2999C7.49167 44.4247 7 43.2377 7 42V21C7 19.7624 7.49167 18.5754 8.36683 17.7002C9.242 16.825 10.429 16.3334 11.6667 16.3334"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M28 37.3334C31.866 37.3334 35 34.1994 35 30.3334C35 26.4674 31.866 23.3334 28 23.3334C24.134 23.3334 21 26.4674 21 30.3334C21 34.1994 24.134 37.3334 28 37.3334Z"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8855_6">
+                                <rect width="56" height="56" fill="black" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <span class="category__name">Camera</span>
+                </div>
+                <div class="item">
+                    <svg class="category__icon" width="56" height="56" viewBox="0 0 56 56" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_8855_644)">
+                            <path
+                                d="M16.3333 30.3334H14C11.4227 30.3334 9.33331 32.4227 9.33331 35V42C9.33331 44.5774 11.4227 46.6667 14 46.6667H16.3333C18.9106 46.6667 21 44.5774 21 42V35C21 32.4227 18.9106 30.3334 16.3333 30.3334Z"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M42 30.3334H39.6667C37.0893 30.3334 35 32.4227 35 35V42C35 44.5774 37.0893 46.6667 39.6667 46.6667H42C44.5773 46.6667 46.6667 44.5774 46.6667 42V35C46.6667 32.4227 44.5773 30.3334 42 30.3334Z"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M9.33331 35V28C9.33331 23.0493 11.3 18.3014 14.8007 14.8007C18.3013 11.3 23.0493 9.33337 28 9.33337C32.9507 9.33337 37.6986 11.3 41.1993 14.8007C44.7 18.3014 46.6666 23.0493 46.6666 28V35"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8855_644">
+                                <rect width="56" height="56" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span class="category__name">HeadPhones</span>
+                </div>
+                <div class="item">
+                    <svg class="category__icon" width="56" height="56" viewBox="0 0 56 56" fill="none"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_8855_809)">
+                            <path
+                                d="M46.6666 14H9.33329C6.75596 14 4.66663 16.0893 4.66663 18.6667V37.3333C4.66663 39.9107 6.75596 42 9.33329 42H46.6666C49.244 42 51.3333 39.9107 51.3333 37.3333V18.6667C51.3333 16.0893 49.244 14 46.6666 14Z"
+                                stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M14 28H23.3333M18.6667 23.3334V32.6667" stroke="black" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M35 25.6666V25.6908" stroke="black" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M42 30.3333V30.3574" stroke="black" stroke-width="3" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_8855_809">
+                                <rect width="56" height="56" fill="white" />
+                            </clipPath>
+                        </defs>
+                    </svg>
+
+                    <span class="category__name">Gaming</span>
+                </div>
+            </div>
+        </div>
+        <div class="best">
+            <div class="best__top">
+                <div class="top">
+                    <div class="top__more">
+                        <div class="color"></div>
+                        <p class="best__title">This Month</p>
+                    </div>
+                    <p class="best__badge">Best Selling Products</p>
+                </div>
+                <button class="best__btn">View All</button>
+            </div>
+            <div class="cards__container">
+                <div class="container">
+                    <div class="card__item">
+                        <img class="card__image" src="./assets/images/Frame 605.png" alt="cards-image-1">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                        <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg" alt="like-icon"></button>
+                        <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                    </div>
+                    <p class="card__name">The north coat</p>
+                    <div class="card__price">
+                        <span class="current__price">$260</span>
+                        <span class="original__price">$360</span>
+                    </div>
+                    <div class="card__rating">
+                        <div class="stars">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                        </div>
+                        <span class="rating__count">(99)</span>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card__item">
+                        <img class="card__image" src="./assets/images/Frame 606.png" alt="cards-image-1">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                        <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg" alt="like-icon"></button>
+                        <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                    </div>
+                    <p class="card__name">Gucci duffle bag</p>
+                    <div class="card__price">
+                        <span class="current__price">$960</span>
+                        <span class="original__price">$1160</span>
+                    </div>
+                    <div class="card__rating">
+                        <div class="stars">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon-2.svg" alt="star-icon">
+                        </div>
+                        <span class="rating__count">(65)</span>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card__item">
+                        <img class="card__image" src="./assets/images/Frame 610.png" alt="cards-image-1">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                        <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg" alt="like-icon"></button>
+                        <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                    </div>
+                    <p class="card__name">RGB liquid CPU Cooler</p>
+                    <div class="card__price">
+                        <span class="current__price">$160</span>
+                        <span class="original__price">$170</span>
+                    </div>
+                    <div class="card__rating">
+                        <div class="stars">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon-2.svg" alt="star-icon">
+                        </div>
+                        <span class="rating__count">(65)</span>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card__item">
+                        <img class="card__image" src="./assets/images/Frame 612 (1).png" alt="cards-image-1">
+                        <button class="add-to-cart-btn">Add To Cart</button>
+                        <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg" alt="like-icon"></button>
+                        <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                    </div>
+                    <p class="card__name">Small BookSelf</p>
+                    <div class="card__price">
+                        <span class="current__price">$360</span>
+                    </div>
+                    <div class="card__rating">
+                        <div class="stars">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                        </div>
+                        <span class="rating__count">(65)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="offer">
+            <div class="offer__right">
+                <p class="offer__label">Categories</p>
+                <p class="offer__title">Enhance Your <br> Music Experience</p>
+                <div class="offer__timers">
+                    <div class="timers">
+                        <span class="timer">23</span>
+                        <span class="timer-item">Hours</span>
+                    </div>
+                    <div class="timers">
+                        <span class="timer">05</span>
+                        <span class="timer-item">Days</span>
+                    </div>
+                    <div class="timers">
+                        <span class="timer">59</span>
+                        <span class="timer-item">Minutes</span>
+                    </div>
+                    <div class="timers">
+                        <span class="timer">35</span>
+                        <span class="timer-item">Seconds</span>
+                    </div>
+                </div>
+                <button class="offer__button">Buy Now!</button>
+            </div>
+            <img class="offer__img" src="./assets/images/jbl-img.png" alt="jbl-img">
+            <img class="offer__img2" src="./assets/images/offer-back.png" alt="offer-back">
+        </div>
+        <div class="our-products">
+            <div class="products-item">
+                <div class="category">
+                    <div class="top">
+                        <div class="top__more">
+                            <div class="color"></div>
+                            <div class="category__title">Our Products</div>
+                        </div>
+                        <p class="category__badge">Explore Our Products</p>
+                    </div>
+                    <div class="navigation__buttons-2">
+                        <button class="prev__btn"><img src="./assets/icons/prev-btn.svg" alt="prev-btn"></button>
+                        <button class="next__btn"><img src="./assets/icons/next-btn.svg" alt="next-btn"></button>
+                    </div>
+                </div>
+            </div>
+            <div class="our-products__items">
+                <div class="items">
+                    <div class="our-product">
+                        <div class="our__item">
+                            <img class="item__image" src="./assets/images/our-img-1.png" alt="cards-image-1">
+                            <button class="add-to-cart-btn">Add To Cart</button>
+                            <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg"
+                                    alt="like-icon"></button>
+                            <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                        </div>
+                        <p class="item__name">Breed Dry Dog Food</p>
+                        <div class="item__price">
+                            <span class="current__price">$100</span>
+                            <div class="stars">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/gray-star.svg" alt="gray-star">
+                                <img src="./assets/icons/gray-star.svg" alt="gray-star">
+                            </div>
+                            <span class="rating__count">(35)</span>
+                        </div>
+                    </div>
+                    <div class="our-product">
+                        <div class="our__item">
+                            <img class="item__image" src="./assets/images/our-img-2.png" alt="cards-image-1">
+                            <button class="add-to-cart-btn">Add To Cart</button>
+                            <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg"
+                                    alt="like-icon"></button>
+                            <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                        </div>
+                        <p class="item__name">CANON EOS DSLR Camera</p>
+                        <div class="item__price">
+                            <span class="current__price">$360</span>
+                            <div class="stars">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="gray-star">
+                                <img src="./assets/icons/gray-star.svg" alt="gray-star">
+                            </div>
+                            <span class="rating__count">(95)</span>
+                        </div>
+                    </div>
+                    <div class="our-product">
+                        <div class="our__item">
+                            <img class="item__image" src="./assets/images/our-img-3.png" alt="cards-image-1">
+                            <button class="add-to-cart-btn">Add To Cart</button>
+                            <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg"
+                                    alt="like-icon"></button>
+                            <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                        </div>
+                        <p class="item__name">ASUS FHD Gaming Laptop</p>
+                        <div class="item__price">
+                            <span class="current__price">$700</span>
+                            <div class="stars">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            </div>
+                            <span class="rating__count">(325)</span>
+                        </div>
+                    </div>
+                    <div class="our-product">
+                        <div class="our__item">
+                            <img class="item__image" src="./assets/images/our-img-4.png" alt="cards-image-1">
+                            <button class="add-to-cart-btn">Add To Cart</button>
+                            <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg"
+                                    alt="like-icon"></button>
+                            <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                        </div>
+                        <p class="item__name">Curology Product Set</p>
+                        <div class="item__price">
+                            <span class="current__price">$500</span>
+                            <div class="stars">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/gray-star.svg" alt="gray-star">
+                            </div>
+                            <span class="rating__count">(145)</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="items">
+                    <div class="our-product">
+                        <div class="our__item">
+                            <img class="item__image" src="./assets/images/our-img-5.png" alt="cards-image-1">
+                            <span class="item__discount">NEW</span>
+                            <button class="add-to-cart-btn">Add To Cart</button>
+                            <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg"
+                                    alt="like-icon"></button>
+                            <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                        </div>
+                        <p class="item__name">Kids Electric Car</p>
+                        <div class="item__price">
+                            <span class="current__price">$960</span>
+                            <div class="stars">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            </div>
+                            <span class="rating__count">(65)</span>
+                        </div>
+                        <div class="card-color">
+                            <button class="card-color-active-1"></button>
+                            <button class="card-color-active-2"></button>
+                        </div>
+                    </div>
+                    <div class="our-product">
+                        <div class="our__item">
+                            <img class="item__image" src="./assets/images/our-img-6.png" alt="cards-image-1">
+                            <button class="add-to-cart-btn">Add To Cart</button>
+                            <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg"
+                                    alt="like-icon"></button>
+                            <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                        </div>
+                        <p class="item__name">Jr. Zoom Soccer Cleats</p>
+                        <div class="item__price">
+                            <span class="current__price">$1160</span>
+                            <div class="stars">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                            </div>
+                            <span class="rating__count">(35)</span>
+                        </div>
+                        <div class="card-color">
+                            <button class="card-color-active-3"></button>
+                            <button class="card-color-active-2"></button>
+                        </div>
+                    </div>
+                    <div class="our-product">
+                        <div class="our__item">
+                            <img class="item__image" src="./assets/images/our-img-7.png" alt="cards-image-1">
+                            <button class="add-to-cart-btn">Add To Cart</button>
+                            <span class="item__discount">NEW</span>
+                            <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg"
+                                    alt="like-icon"></button>
+                            <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                        </div>
+                        <p class="item__name">GP11 Shooter USB Gamepad</p>
+                        <div class="item__price">
+                            <span class="current__price">$660</span>
+                            <div class="stars">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/gray-star.svg" alt="gray-star">
+                            </div>
+                            <span class="rating__count">(55)</span>
+                        </div>
+                        <div class="card-color">
+                            <button class="card-color-active-4"></button>
+                            <button class="card-color-active-2"></button>
+                        </div>
+                    </div>
+                    <div class="our-product">
+                        <div class="our__item">
+                            <img class="item__image" src="./assets/images/our-img-8.png" alt="cards-image-1">
+                            <button class="add-to-cart-btn">Add To Cart</button>
+                            <button class="wishlist__btn"><img src="./assets/icons/like-icon.svg"
+                                    alt="like-icon"></button>
+                            <button class="view__btn"><img src="./assets/icons/view-icon.svg" alt="view-icon"></button>
+                        </div>
+                        <p class="item__name">Quilted Satin Jacket</p>
+                        <div class="item__price">
+                            <span class="current__price">$660</span>
+                            <div class="stars">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/star-icon.svg" alt="star-icon">
+                                <img src="./assets/icons/gray-star.svg" alt="gray-star">
+                            </div>
+                            <span class="rating__count">(55)</span>
+                        </div>
+                        <div class="card-color">
+                            <button class="card-color-active-5"></button>
+                            <button class="card-color-active-2"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="products__button">
+                <button class="products__button-btn">View All Products</button>
+            </div>
+        </div>
+        <div class="new-arrival-section">
+            <div class="new-arrival-header">
+                <div class="top__more">
+                    <div class="color"></div>
+                    <p class="new-arrival-name">Featured</p>
+                </div>
+                <p class="new-arrival-badge">New Arrival</p>
+            </div>
+            <div class="new-arrival-grid">
+                <div class="new-arrival-item">
+                    <img class="new-arrival-image" src="./assets/images/ps5-img.png" alt="ps5-img">
+                    <p class="new-arrival-title">PlayStation 5</p>
+                    <span class="new-arrival-description">Black and White version of the PS5 <br> coming out on
+                        sale.</span>
+                    <a class="shop-now-btn" href="#">Shop Now</a>
+                </div>
+                <div class="new-grid-1">
+                    <div class="new-arrival-item-2">
+                        <img class="new-arrival-image-2" src="./assets/images/new-img-2.png" alt="girl-img">
+                        <p class="new-arrival-title-2">Women’s Collections</p>
+                        <span class="new-arrival-description-2">Featured woman collections that <br> give you
+                            another vibe.</span>
+                        <a class="shop-now-btn-2" href="#">Shop Now</a>
+                    </div>
+                    <div class="new-grid-2">
+                        <div class="new-arrival-item-3">
+                            <img class="new-arrival-image-3" src="./assets/images/speakers.png" alt="speakers">
+                            <img class="new-arrival-image-3-1" src="./assets/images/speaker-blur.png" alt="blur">
+                            <p class="new-arrival-title-3">Speakers</p>
+                            <span class="new-arrival-description-3">Amazon wireless speakers</span>
+                            <a class="shop-now-btn-3" href="#">Shop Now</a>
+                        </div>
+                        <div class="new-arrival-item-3">
+                            <img class="new-arrival-image-3" src="./assets/images/parfume.png" alt="parfume">
+                            <img class="new-arrival-image-3-1" src="./assets/images/speaker-blur.png" alt="blur">
+                            <p class="new-arrival-title-3">Perfume</p>
+                            <span class="new-arrival-description-3">GUCCI INTENSE OUD EDP</span>
+                            <a class="shop-now-btn-3" href="#">Shop Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="services">
+            <div class="services__item">
+                <img class="services__item-image" src="./assets/icons/services-img-1.svg" alt="services">
+                <h3 class="services__item-title">FREE AND FAST DELIVERY</h3>
+                <p class="services__item-text">Free delivery for all orders over $140</p>
+            </div>
+            <div class="services__item">
+                <img class="services__item-image" src="./assets/icons/services-img-3.svg" alt="services">
+                <h3 class="services__item-title">24/7 CUSTOMER SERVICE</h3>
+                <p class="services__item-text">Friendly 24/7 customer support</p>
+            </div>
+            <div class="services__item">
+                <img class="services__item-image" src="./assets/icons/services-img-2.svg" alt="services">
+                <h3 class="services__item-title">MONEY BACK GUARANTEE</h3>
+                <p class="services__item-text">We reurn money within 30 days</p>
+            </div>
+            <button class="up-button"><a href="./index.html"><img class="up-btn-img" src="./assets/icons/next-btn.svg"
+                        alt="up"></a></button>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="form-card">
+                <p class="footer__logo">Exclusive</p>
+                <form class="footer__form">
+                    <p class="form__title">Subscribe</p>
+                    <p class="form__text">Get 10% off your first order</p>
+                    <div class="form__input-box">
+                        <input class="form__input" type="email" placeholder="Enter your email">
+                        <button type="submit" class="form__input-btn"><img src="./assets/icons/input-btn.svg"
+                                alt="input-btn"></button>
+                    </div>
+                </form>
+            </div>
+            <div class="footer__content">
+                <div class="footer__content-section">
+                    <p class="footer__content-section-title">Support</p>
+                    <p class="footer__content-section-text">111 Bijoy sarani, Dhaka,<br> DH 1515, Bangladesh.</p>
+                    <ul class="footer__content-links">
+                        <li><a class="footer__links-item" href="#">exclusive@gmail.com</a></li>
+                        <li><a class="footer__links-item" href="#">+88015-88888-9999</a></li>
+                    </ul>
+                </div>
+                <div class="footer__content-section">
+                    <p class="footer__content-section-title">Account</p>
+                    <ul class="footer__content-links">
+                        <li><a class="footer__links-item" href="#">My Account</a></li>
+                        <li><a class="footer__links-item" href="#">Login / Register</a></li>
+                        <li><a class="footer__links-item" href="#">Cart</a></li>
+                        <li><a class="footer__links-item" href="#">Wishlist</a></li>
+                        <li><a class="footer__links-item" href="#">Shop</a></li>
+                    </ul>
+                </div>
+                <div class="footer__content-section">
+                    <p class="footer__content-section-title">Quick Link</p>
+                    <ul class="footer__content-links">
+                        <li><a class="footer__links-item" href="#">Privacy Policy</a></li>
+                        <li><a class="footer__links-item" href="#">Terms Of Use</a></li>
+                        <li><a class="footer__links-item" href="#">FAQ</a></li>
+                        <li><a class="footer__links-item" href="#">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="app-download-container">
+                <p class="app-title">Download App</p>
+                <p class="app-description">Save $3 with App New User Only</p>
+                <div class="qr-box">
+                    <img class="qr-code" src="./assets/icons/Qrcode 1.svg" alt="qr-code">
+                    <div class="store-box">
+                        <button class="store-buttons"><img src="./assets/icons/play-market.svg"
+                                alt="play-market"></button>
+                        <button class="store-buttons"><img src="./assets/icons/app-store.svg" alt="app-store"></button>
+                    </div>
+                </div>
+                <div class="social-icons">
+                    <button class="social-btn"><a href=""><img src="./assets/icons/Icon-Facebook.svg"
+                                alt="Icon-Facebook"></a></button>
+                    <button class="social-btn"><a href=""><img src="./assets/icons/Icon-Twitter.svg"
+                                alt="Icon-Twitter"></a></button>
+                    <button class="social-btn"><a href=""><img src="./assets/icons/icon-instagram.svg"
+                                alt="icon-instagram"></a></button>
+                    <button class="social-btn"><a href=""><img src="./assets/icons/Icon-Linkedin.svg"
+                                alt="Icon-Linkedin"></a></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-line"></div>
+        <div class="copyright-div">
+            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M10.5 18.3332C15.1024 18.3332 18.8334 14.6022 18.8334 9.99984C18.8334 5.39746 15.1024 1.6665 10.5 1.6665C5.89765 1.6665 2.16669 5.39746 2.16669 9.99984C2.16669 14.6022 5.89765 18.3332 10.5 18.3332Z"
+                    stroke="#3d3d3d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                    d="M13 8.14799C13 8.14799 11.9706 6.6665 10.2549 6.6665C8.53924 6.6665 7.16669 8.14799 7.16669 9.99984C7.16669 11.8517 8.53924 13.3332 10.2549 13.3332C11.9706 13.3332 13 11.8517 13 11.8517"
+                    stroke="#3d3d3d" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+            <p class="copyright">Copyright Rimel 2022. All right reserved</p>
+        </div>
+    </footer>
+</body>
+
+</html>
