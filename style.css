@@ -198,12 +198,16 @@ a {
 
 
 .slideshow {
-    display: flex;
+    display: none;
     justify-content: space-between;
     width: 892px;
     height: 344px;
     background-color: #000;
     margin-top: 20px;
+}
+
+.slideshow.active {
+    display: flex;
 }
 
 .slideshow__div {
@@ -277,6 +281,10 @@ a {
     border: solid 2px white;
     background-color: #DB4444;
 } 
+
+.slide__image {
+    width: 496px;
+}
 
 section {
     max-width: 1170px;
@@ -2021,7 +2029,7 @@ section {
     padding: 20px;
     border-radius: 4px;
     background-color: rgba(117, 114, 114, 0.5);
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);   
     transform: scale(0);
     transition: all 0.3s;
     right: 200px;

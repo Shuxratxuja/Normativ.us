@@ -63,6 +63,7 @@
             </ul>
             <div class="line-2"></div>
             <div>
+                <!-- Rustamxojayev Shuxratxoja -->
                 <div class="slideshow">
                     <div class="slideshow__div">
                         <div class="apple">
@@ -75,10 +76,58 @@
                     </div>
                     <img class="slide__image" src="./assets/images/apple-img.png" alt="apple-img">
                 </div>
+                <div class="slideshow">
+                    <div class="slideshow__div">
+                        <div class="apple">
+                            <img class="apple__logo" src="./assets/icons/apple-logo.svg" alt="apple-logo">
+                            <span class="series">Samsung S25 Series</span>
+                        </div>
+                        <p class="slide__text">Up to 10% <br> off Voucher</p>
+                        <a class="slide__button" href=""><span>Shop Now</span><img src="./assets/icons/arrow-white.svg"
+                                alt="arrow-white"></a>
+                    </div>
+                    <img class="slide__image" src="https://fonexpress.net/wp-content/uploads/2025/01/Samsung-Galaxy-S25-ultra.jpg" alt="apple-img">
+                </div>
+                <div class="slideshow">
+                    <div class="slideshow__div">
+                        <div class="apple">
+                            <img class="apple__logo" src="./assets/icons/apple-logo.svg" alt="apple-logo">
+                            <span class="series">Xiaomi 14 Series</span>
+                        </div>
+                        <p class="slide__text">Up to 10% <br> off Voucher</p>
+                        <a class="slide__button" href=""><span>Shop Now</span><img src="./assets/icons/arrow-white.svg"
+                                alt="arrow-white"></a>
+                    </div>
+                    <img class="slide__image" src="https://cdn.mediablog.mediapark.uz/corecms/post-images/01J8QXA67F2XEABK69R5GJS50P.webp" alt="apple-img">
+                </div>
+                <div class="slideshow">
+                    <div class="slideshow__div">
+                        <div class="apple">
+                            <img class="apple__logo" src="./assets/icons/apple-logo.svg" alt="apple-logo">
+                            <span class="series">One Plus Series</span>
+                        </div>
+                        <p class="slide__text">Up to 10% <br> off Voucher</p>
+                        <a class="slide__button" href=""><span>Shop Now</span><img src="./assets/icons/arrow-white.svg"
+                                alt="arrow-white"></a>
+                    </div>
+                    <img class="slide__image" src="https://www.dgl.ru/wp-content/uploads/2024/11/oneplus-13.jpeg" alt="apple-img">
+                </div>
+                <div class="slideshow">
+                    <div class="slideshow__div">
+                        <div class="apple">
+                            <img class="apple__logo" src="./assets/icons/apple-logo.svg" alt="apple-logo">
+                            <span class="series">Google Pixel 9 Series</span>
+                        </div>
+                        <p class="slide__text">Up to 10% <br> off Voucher</p>
+                        <a class="slide__button" href=""><span>Shop Now</span><img src="./assets/icons/arrow-white.svg"
+                                alt="arrow-white"></a>
+                    </div>
+                    <img class="slide__image" src="https://www.notebookcheck-ru.com/fileadmin/Notebooks/News/_nc4/tensor-g6-stuff-new.jpg" alt="apple-img">
+                </div>
                 <div class="slider">
                     <button class="slider__indicators"></button>
                     <button class="slider__indicators"></button>
-                    <button class="slider__indicators indicators-actv"></button>
+                    <button class="slider__indicators"></button>
                     <button class="slider__indicators"></button>
                     <button class="slider__indicators"></button>
                 </div>
@@ -96,6 +145,7 @@
                     <p class="title__more">Flash Sales</p>
                 </div>
                 <div class="sales__right">
+                    <!-- Rustamxojayev Shuxratxoja -->
                     <div class="section__title">
                         <div class="title__time">
                             <span class="sales__timer">Days</span>
@@ -911,6 +961,102 @@
             <p class="copyright">Copyright Rimel 2022. All right reserved</p>
         </div>
     </footer>
+
+    <script>
+
+        const slides = document.querySelectorAll(".slideshow")
+        const indicators = document.querySelectorAll(".slider__indicators")
+
+        let currentIndex = 0
+        let interval
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle("active", i === index)
+            })
+
+            indicators.forEach((btn, i) => {
+                btn.classList.toggle("indicators-actv", i === index)
+            })
+
+            currentIndex = index
+        }
+
+        function nextSlide() {
+            currentIndex = (currentIndex + 1) % slides.length
+            showSlide(currentIndex)
+        }
+
+        function startSlider() {
+            interval = setInterval(nextSlide, 3000)
+        }
+
+        function stopSlider() {
+            clearInterval(interval)
+        }
+
+        indicators.forEach((btn, index) => {
+            btn.addEventListener("click", () => {
+                stopSlider()
+                showSlide(index)
+                setTimeout(() => {
+                    startSlider()
+                }, 5000)
+            })
+        })
+
+        showSlide(currentIndex)
+        startSlider()
+
+
+
+         const daysEl = document.querySelectorAll(".sales__timer-item")[0]
+        const hoursEl = document.querySelectorAll(".sales__timer-item")[1]
+        const minutesEl = document.querySelectorAll(".sales__timer-item")[2]
+        const secondsEl = document.querySelectorAll(".sales__timer-item")[3]
+
+        const TIMER_KEY = "flash-sale-end-time"
+        let endTime = localStorage.getItem(TIMER_KEY)
+
+        if (!endTime) {
+            const now = new Date()
+            now.setDate(now.getDate() + 3)
+            endTime = now.getTime()
+            localStorage.setItem(TIMER_KEY, endTime)
+        } else {
+            endTime = parseInt(endTime)
+        } 
+
+        function updateTimer() {
+            const now = new Date().getTime()
+            const diff = endTime - now
+
+            if (diff <= 0) {
+                clearInterval(timerInterval)
+                daysEl.textContent = "00"
+                hoursEl.textContent = "00"
+                minutesEl.textContent = "00"
+                secondsEl.textContent = "00"
+                alert("Aksiya yakunlandi!")
+                localStorage.removeItem(TIMER_KEY)
+                return
+            } 
+
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24))
+            const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60 ))
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60))
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000)
+
+            daysEl.textContent = String(days).padStart(2, "0")
+            hoursEl.textContent = String(hours).padStart(2, "0")
+            minutesEl.textContent = String(minutes).padStart(2, "0")
+            secondsEl.textContent = String(seconds).padStart(2, "0")
+        }
+
+        const timerInterval = setInterval(updateTimer, 1000)
+        updateTimer()
+
+    </script>
 </body>
 
 </html>
