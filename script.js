@@ -211,3 +211,65 @@ document.addEventListener("DOMContentLoaded", function (){
         })
     }
 })
+
+
+// Rustamxojayev Shuxratxoja
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cartKey = "shoppingCart"
+    let cart = JSON.parse(localStorage.getItem(cartKey)) || []
+
+    const addToCardBtn = document.querySelectorAll(".add-to-cart-btn")
+
+    addToCardBtn.forEach(button => {
+        const productElement = button.closest(".product__item")
+        const productId = productElement.dataset.id
+
+        const isInCart = cart.some(item => item.id === productId)
+        if (isInCart) {
+            button.textContent = "Added"
+            button.classList.add("added")
+        }
+
+        button.addEventListener("click", () => {
+            const index = cart.findIndex(item => item.id === productId)
+
+            if ( index === -1) {
+                const product = {
+                    id: productId,
+                    name: productElement.dataset.name,
+                    price: parseFloat(productElement.dataset.price),
+                    image: productElement.dataset.img,
+                    quantity: 1
+                }
+                cart.push(product)
+                button.textContent = "Added"
+                button.classList.add("added")
+            } else {
+                cart.splice(index, 1)
+                button.textContent = "Add To Cart"
+                button.classList.remove("added")
+            }
+
+            localStorage.setItem(cartKey, JSON.stringify(cart))
+        })
+    })
+})
+
+
+ const upBtn = document.querySelector(".up-button")
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 500) {
+                upBtn.classList.add("show")
+            } else {
+                upBtn.classList.remove('show')
+            }
+        })
+
+        upBtn.addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            })
+        })

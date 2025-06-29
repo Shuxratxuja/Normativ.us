@@ -467,6 +467,11 @@ section {
     display: none;
 }
 
+.add-to-cart-btn.added {
+    background-color: green;
+    color: white;
+}
+
 .product__discount {
     background-color: #DB4444;
     padding: 4px 12px;
@@ -1356,18 +1361,23 @@ section {
 }
 
 .up-button {
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
-    position: absolute;
+    position: fixed;
     width: 46px;
     height: 46px;
     border-radius: 50%;
     background-color: #F5F5F5;
     border: none;
     transform: rotate(-90deg);
-    top: 5364px;
-    right: 89px;
+    bottom: 30px;
+    right: 30px;
+    z-index: 1000;
+}
+
+.up-button.show {
+    display: block;
 }
 
 .up-btn-img {
