@@ -132,4 +132,82 @@ const slides = document.querySelectorAll(".slideshow")
         })
 
 
+// Rustamxojayev Shuxratxoja 
 
+// Wishlist page ga product qoshish
+
+document.addEventListener("DOMContentLoaded", function (){
+    const currentPage = window.location.pathname
+
+    const products = document.querySelectorAll(".products")
+
+    products.forEach((productEl) => {
+        const wishlistBtn = productEl.querySelector(".wishlist__btn")
+        const cartBtn = productEl.querySelector(".add-to-cart-btn")
+        const card = productEl.querySelector(".product__item")
+
+        const product = {
+            id: card.dataset.id,
+            name: productEl.querySelector(".product__name").innerText,
+            price: productEl.querySelector(".current__price").innerText,
+            image: productEl.querySelector(".product__image").src,
+        }
+
+        wishlistBtn.addEventListener("click", function () {
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
+            const index = wishlist.findIndex((p) => p.id === product.id)
+
+            if (index=== -1) {
+                wishlist.push(product)
+                wishlistBtn.classList.add("active")
+            } else {
+                wishlist.splice(index, 1)
+                wishlistBtn.classList.remove("active")
+            }
+
+            localStorage.setItem("wishlist", JSON.stringify(wishlist))
+        })
+
+        const wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
+        if (wishlist.some((item) => item.id === product.id)) {
+            wishlistBtn.classList.add("active")
+        }
+    })
+
+    if (currentPage.includes("wishlist")) {
+        const wishlistContainer = document.querySelector(".wishlist-cards")
+        const wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
+
+        wishlist.forEach((product) => {
+            const card = document.createElement("div")
+            card.classList.add("wishlist-card")
+            card.innerHTML = `
+                <div class="wishlist__item">
+                    <img class="wishlist__image" src="${product.image}" alt="wishlist-img">
+                    <button class="add-to-cart" data-id="${product.id}">
+                        <img src="./assets/icons/Cart1 (1).svg" alt="cart-icon">
+                        <span>Add To Cart</span>
+                    </button>   
+                    <button class="delete__icon" data-id="${product.id}">
+                        <img src="./assets/icons/delet.svg" alt="cart-icon">
+                    </button>
+                </div>
+                <p class="wishlist__name">${product.name}</p>
+                <div class="wishlist__price">
+                    <span class="current__price">${product.price}</span>     
+                </div>    
+            `
+            wishlistContainer.appendChild(card)
+        })
+
+        wishlistContainer.addEventListener("click", function (e) {
+            if (e.target.closest(".delete__icon")) {
+                const id = e.target.closest(".delete__icon").dataset.id
+                let wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
+                wishlist = wishlist.filter((item) => item.id !== id)
+                localStorage.setItem("wishlist", JSON.stringify(wishlist))
+                e.target.closest(".wishlist-card")?.remove()
+            }
+        })
+    }
+})

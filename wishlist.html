@@ -290,6 +290,44 @@
             <p class="copyright">Copyright Rimel 2022. All right reserved</p>
         </div>
     </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const wishlistContainer = document.querySelector(".wishlist-cards")
+            const wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
+
+                wishlist.forEach((product) => {
+                const card = document.createElement("div")
+                card.classList.add("wishlist-card")
+                card.innerHTML = `
+                    <div class="wishlist__item">
+                        <img class="wishlist__image" src="${product.image}" alt="wishlist-img">
+                        <button class="add-to-cart" data-id="${product.id}">
+                            <img src="./assets/icons/Cart1 (1).svg" alt="cart-icon">
+                            <span>Add To Cart</span>
+                        </button>   
+                        <button class="delete__icon" data-id="${product.id}">
+                            <img src="./assets/icons/delet.svg" alt="cart-icon">
+                        </button>
+                    </div>
+                    <p class="wishlist__name">${product.name}</p>
+                    <div class="wishlist__price">
+                        <span class="current__price">${product.price}</span>     
+                    </div>    
+                `
+                wishlistContainer.appendChild(card)
+            })
+
+                wishlistContainer.addEventListener("click", function (e) {
+                    if (e.target.closest(".delete__icon")) {
+                        const id = e.target.closest(".delete__icon").dataset.id
+                        let wishlist = JSON.parse(localStorage.getItem("wishlist")) || []
+                        wishlist = wishlist.filter((item) => item.id !== id)
+                        localStorage.setItem("wishlist", JSON.stringify(wishlist))
+                        e.target.closest(".wishlist-card")?.remove()
+                    }
+            })
+        })
+    </script>
     <script src="script.js"></script>
 </body>
 

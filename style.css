@@ -1819,6 +1819,12 @@ section {
 
 .wishlist-cards {
     margin-top: 60px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+}
+
+.wishlist__btn.active img {
+    filter: invert(34%) sepia(96%) saturate(574%) hue-rotate(316deg) brightness(93%) contrast(101%);
 }
 
 .wishlist__item {
