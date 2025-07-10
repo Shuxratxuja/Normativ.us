@@ -114,9 +114,10 @@
                         placeholder="Confirm New Password" />
                 </div>
                 <div class="edit-form-btn">
-                    <button type="button" class="cancel-btn">Cancel</button>
-                    <button type="button" class="save-btn">Save Changes</button>
+                    <button type="button" onclick="cancelChanges()" class="cancel-btn">Cancel</button>
+                    <button type="button" onclick="savaChanges()" class="save-btn">Save Changes</button>
                 </div>
+                <p id="error-msg" style="color: red; margin-top: 10px;"></p>
             </form>
         </div>
     </main>
@@ -199,6 +200,86 @@
             <p class="copyright">Copyright Rimel 2022. All right reserved</p>
         </div>
     </footer>
+    <script>
+
+        localStorage.setItem('userProfile', JSON.stringify({
+            firstName: "Shuxrat",
+            lastName: "Rustamxojayev",
+            email: "shuxrat@gamil.com",
+            address: "Tashkent",
+            password: "1234"
+        }))
+            
+            
+
+        window.onload = () => {
+            const user = JSON.parse(localStorage.getItem("userProfile"))
+            if (user) {
+                document.getElementById('first-name').value = user.firstName || ''
+                document.getElementById('last-name').value = user.lastName || ''
+                document.getElementById('email').value = user.email || ''
+                document.getElementById('address').value = user.address || ''
+            }
+        }
+
+        function savaChanges() {
+            const firstName = document.getElementById('first-name').value.trim()
+            const lastName = document.getElementById('last-name').value.trim()
+            const email = document.getElementById('email').value.trim()
+            const address = document.getElementById('address').value.trim()
+
+            const currentPassword = document.getElementById('current-password').value
+            const newPassword = document.getElementById('new-password').value
+            const confirmPassword = document.getElementById('confirm-password').value
+
+            const storedUser = JSON.parse(localStorage.getItem("userProfile")) || {}
+
+            const storedPassword = storedUser.password || "1234"
+
+            if (currentPassword || newPassword || confirmPassword) {
+                if (currentPassword !== storedPassword) {
+                    showError("Current password is incorrect.")
+                    return
+                }
+                if (newPassword !== confirmPassword) {
+                    showError("New password and confirm password do not match.")
+                    return 
+                }
+
+                storedUser.password = newPassword
+            }
+
+            localStorage.setItem('userProfile', JSON.stringify({
+                firstName,
+                lastName,
+                email,
+                address,
+                password: storedUser.password || storedPassword
+            }))
+
+            showError('Ozgartishlar saqlandi!', 'green')
+        }
+
+        function cancelChanges() {
+            const user = JSON.parse(localStorage.getItem("userProfile")) || {}
+
+            document.getElementById('first-name').value = user.firstName || ''
+            document.getElementById('last-name').value = user.lastName || ''
+            document.getElementById('email').value = user.email || ''
+            document.getElementById('address').value = user.address || ''
+            document.getElementById('current-password').value = ''  
+            document.getElementById('new-password').value = ''
+            document.getElementById('confirm-password').value = ''
+
+            showError('')
+        }
+
+        function showError(message, color = 'red') {
+            const errorMsg = document.getElementById('error-msg')
+            errorMsg.textContent = message
+            errorMsg.style.color = color
+        }
+    </script>
 </body>
 
 </html>
