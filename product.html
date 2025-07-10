@@ -340,6 +340,54 @@
             })
         })
     </script>
+    <script>
+        const colorButtons = document.querySelectorAll(".product-colours button");
+        let selectedColor = null;
+
+        colorButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                colorButtons.forEach(b => b.classList.remove("selected-color"));
+                btn.classList.add("selected-color");
+                selectedColor = btn.classList.contains('color-btn-1') ? "Blue" : "Red"
+                console.log("Tnalangan rang:", selectedColor);
+            })
+        })
+
+        const plusBtn = document.querySelector('.icon-plus');
+        const minusBtn = document.querySelector('.icon-minus');
+        const quantitySpan = document.querySelector('.quantity-num');
+        let quantity = parseInt(quantitySpan.textContent)
+
+        plusBtn.addEventListener('click', () => {
+            quantity++
+            quantitySpan.textContent = quantity;
+        })
+
+        minusBtn.addEventListener('click', () => {
+            if (quantity > 1) {
+                quantity--
+                quantitySpan.textContent = quantity;
+            }
+        })
+
+        const buyNowNowBnt = document.querySelector(".product-by-btn");
+
+        buyNowNowBnt.addEventListener("click", () => {
+            const productName =  document.querySelector(".product-name").textContent;
+            const price = document.querySelector(".product-price").textContent;
+
+            const data = {
+                product: productName,
+                rang: selectedColor || "Tanlanmagan",
+                miqdor: quantity,
+                narx: price
+            }
+
+            console.log("Xarid malumotlari:", data);
+            alert(`Xarid boshlandi: \nMahsulot: ${data.product} \nRang: ${data.rang} \nMiqdor: ${data.miqdor} \nNarx: ${data.narx}`)
+            
+        }) 
+    </script>
 </body>
 
 </html>
