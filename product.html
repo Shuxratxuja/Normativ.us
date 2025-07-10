@@ -320,6 +320,26 @@
             <p class="copyright">Copyright Rimel 2022. All right reserved</p>
         </div>
     </footer>
+    <!-- Rustamxojayev Shuxratxoja -->
+
+    <script>
+        const mainImage = document.getElementById('main-image');
+        const thumbnailImages = document.querySelectorAll('.thumbnail-images');
+
+        thumbnailImages.forEach(thumnnail => {
+            thumnnail.addEventListener('click', () => {
+                const clickedImageSrc = thumnnail.querySelector('img').getAttribute("src")
+
+                mainImage.setAttribute("src", clickedImageSrc)
+                mainImage.style.width = "300px"
+                mainImage.style.height = "500px"
+
+                thumbnailImages.forEach(thumb => thumb.classList.remove("active"))
+
+                thumnnail.classList.add("active")
+            })
+        })
+    </script>
 </body>
 
 </html>
