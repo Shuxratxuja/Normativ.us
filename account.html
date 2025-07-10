@@ -82,37 +82,40 @@
                     <p>My Wishlist</p>
                 </div>
             </div>
-            <form class="profile-edit-form">
+            <form id="profile-form" class="profile-edit-form">
                 <p class="profile-name">Edit Your Profile</p>
                 <div class="input-cards">
                     <div class="profile-input-box">
                         <p class="profile-text">First Name</p>
-                        <input class="profile-input" type="text" placeholder="MD">
+                        <input id="first-name" class="profile-input" type="text" placeholder="MD" />
                     </div>
                     <div class="profile-input-box">
                         <p class="profile-text">Last Name</p>
-                        <input class="profile-input" type="text" placeholder="Rimel">
+                        <input id="last-name" class="profile-input" type="text" placeholder="Rimel" />
                     </div>
                 </div>
                 <div class="input-cards-2">
                     <div class="profile-input-box">
                         <p class="profile-text">Email</p>
-                        <input class="profile-input" type="email" placeholder="rimel1111@gmail.com">
+                        <input id="email" class="profile-input" type="email" placeholder="rimel1111@gmail.com" />
                     </div>
                     <div class="profile-input-box">
                         <p class="profile-text">Address</p>
-                        <input class="profile-input" type="text" placeholder="Kingston, 5236, United State">
+                        <input id="address" class="profile-input" type="text"
+                            placeholder="Kingston, 5236, United State" />
                     </div>
                 </div>
                 <div class="password-section">
                     <p class="profile-text">Password Changes</p>
-                    <input class="password-input" type="password" placeholder="Current Passwod">
-                    <input class="password-input" type="password" placeholder="New Passwod">
-                    <input class="password-input" type="password" placeholder="Confirm New Passwod">
+                    <input id="current-password" class="password-input" type="password"
+                        placeholder="Current Password" />
+                    <input id="new-password" class="password-input" type="password" placeholder="New Password" />
+                    <input id="confirm-password" class="password-input" type="password"
+                        placeholder="Confirm New Password" />
                 </div>
                 <div class="edit-form-btn">
-                    <button type="submit" class="cancel-btn">Cancel</button>
-                    <button type="submit" class="save-btn">Save Changes</button>
+                    <button type="button" class="cancel-btn">Cancel</button>
+                    <button type="button" class="save-btn">Save Changes</button>
                 </div>
             </form>
         </div>
